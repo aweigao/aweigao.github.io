@@ -1,0 +1,133 @@
+
+/* Sidebar */
+#sidebar-wrapper {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 5px 0 5px; 
+    z-index: 1;
+    position: absolute;   /* means that the starting point of the menu is top-left, along with everything else. */
+    width: 50px; /* display width = 250px, hidden is 0 */
+    height: 100vh;
+    overflow-y: hidden; /* y =  left and right, when you have content in sidebar that takes more than width, hide it, content won't pop out of sidebar */
+    /* border: 2px solid black; */
+    overflow-x: hidden;
+    opacity: 0.9;
+    transition: all 0.3s;
+
+}
+
+#sidebar-wrapper .sidebar-header {
+    background: #2d7be0;
+    color:white;
+    text-align: center;
+    position: static;
+}
+
+#sidebar-wrapper .sidebar-header a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 50px 50px 50px 50px;
+}
+
+/* Remedy for covering, change the width of sidebar to display it, change the styling of the above for when the menu is actually displayed*/
+#wrapper.menuHidden #sidebar-wrapper {
+    width: 250px;
+}
+
+#wrapper.menuHidden #page-content-wrapper {
+    padding-left: 250px;
+}
+
+.sidebar-contents {
+    margin-top: 70px;
+}
+/* Sidebar Styling */
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 10px;
+    line-height: 80px;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ddd;
+    width: 250px;
+}
+
+.sidebar-nav li .projects {
+    background: rgb(108, 223, 252);
+    color: black;
+}
+
+.sidebar-nav li a:hover {
+    background: rgb(108, 223, 252);
+    color: black;
+    transition: 0.2s;
+}
+
+#sidebar-wrapper .sidebar-contents{
+    height: 100%;
+}
+
+i {
+    margin-right: 90px;
+    font-size: 1.6em;
+}
+
+.toggler {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+.toggler .toggleButton {
+    text-indent: 10px;
+    border: 2px solid white;
+}
+
+.toggler li a:hover {
+    background: green;
+    transition: 0.2s;
+}
+
+.toggler li a {
+    display: flex;
+    align-items: left;
+    text-decoration: none;
+    color: #ddd;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sidebar-nav .home {
+    text-indent: 10px;
+}
+
+#sidebar-wrapper .sidebar-contents .last-updated .row{
+    color: white;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+#sidebar-wrapper .sidebar-contents .last-updated p {
+    font-size: 12px;
+    display: none;
+}
+
+#wrapper.menuHidden #sidebar-wrapper .sidebar-contents .last-updated p{
+    display: block;
+}
+
+
+/* @media (max-width: 768px) {
+    $("#menu-toggle").click( function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("menuHidden");
+    });
+} */

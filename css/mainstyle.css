@@ -1,0 +1,44 @@
+html {
+    height: 100%;
+
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.row {
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Main Content */
+#wrapper #page-content-wrapper {
+    width: 100%; /* with just this, if you open the sidebar, it will cover some parts of the main content, so you need to rememdy this below */
+    height: 100%;
+    position: absolute;
+    /* border: 5px solid green; */
+    padding-left: 50px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/bg-home2.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+}
+
+@media (max-width: 1174px) {
+    #wrapper #page-content-wrapper {
+        height: 150%;
+    }
+}
+
+/* need to adjust @media based on size of the images, and 
+ when they resort to stacking */
